@@ -1,0 +1,140 @@
+:root {
+    --color1: #72a488;
+    --color2: #212c28;
+}
+
+* {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    background-color: var(--color2);
+}
+
+.square {
+    position: absolute;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: var(--color1);
+
+    border-radius: 10%;
+
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+
+    z-index: -10;
+}
+
+.eye {
+    position: absolute;
+
+    width: 8px;
+    height: 14px;
+
+    background-color: var(--color1);
+
+    border-radius: 50%;
+
+    z-index: 10;
+}
+
+.snake {
+    position: absolute;
+
+    width: 51px;
+    height: 51px;
+
+    background-color: var(--color2);
+
+    border-radius: 10%;
+
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+}
+
+.body {
+    z-index: -1;
+}
+
+.fruit {
+    position: absolute;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: var(--color2);
+
+    border-radius: 45%;
+
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+
+    z-index: -2;
+}
+
+.stick {
+    position: absolute;
+
+    width: 5px;
+    height: 15px;
+
+    background-color: var(--color2);
+
+    border-radius: 15%;
+
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+
+    z-index: -3;
+}
+
+.leaf {
+    position: absolute;
+
+    width: 8px;
+    height: 8px;
+
+    background-color: var(--color2);
+
+    border-radius: 50% 0%;
+
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+
+    z-index: -4;
+}
+
+@font-face {
+    font-family: "retroFont";
+    src: url(../fonts/Retro-Gaming.ttf) format("truetype");
+}
+
+.retro {
+    font-family: "retroFont";
+    color: var(--color1);
+    font-size: 1.5em;
+    position: absolute;
+    user-select: none;
+}
+
+#gameOver {
+    display: none;  
+}
+
+#paused {
+    display: none;  
+}
+
+#onePlayer:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#twoPlayer:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
